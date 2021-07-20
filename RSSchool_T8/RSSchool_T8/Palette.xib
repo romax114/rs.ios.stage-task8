@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PaletteView">
+            <connections>
+                <outlet property="color10View" destination="ciT-zJ-6B8" id="7LG-Qk-GPY"/>
+                <outlet property="color11View" destination="SzH-Ne-up0" id="loE-xn-kYk"/>
+                <outlet property="color12View" destination="IUl-ZN-hsN" id="4T1-Q7-aGF"/>
+                <outlet property="color1View" destination="t5z-M9-Pvi" id="N4b-k2-tlH"/>
+                <outlet property="color2View" destination="hsN-Ai-cSb" id="jer-eA-shm"/>
+                <outlet property="color3View" destination="pMh-a3-Mmc" id="jz1-gY-GnR"/>
+                <outlet property="color4View" destination="OVd-4Q-TFD" id="7av-iq-5WF"/>
+                <outlet property="color5View" destination="hmR-nh-AxC" id="JWL-eK-DEG"/>
+                <outlet property="color6View" destination="Ugn-g1-9B5" id="bSD-sL-aFp"/>
+                <outlet property="color7View" destination="PcD-Y2-DrG" id="Zdq-id-1Ni"/>
+                <outlet property="color8View" destination="Zpr-na-3rO" id="2nn-kZ-57Z"/>
+                <outlet property="color9View" destination="76e-cI-fPV" id="NtG-LS-A2T"/>
+                <outlet property="contentView" destination="iN0-l3-epB" id="gjR-W4-Mrq"/>
+                <outlet property="saveButton" destination="aqm-RO-Xbj" id="egQ-7E-wqB"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="341"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="HNU-tB-vIK">
+                    <rect key="frame" x="17" y="150" width="340" height="40"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PcD-Y2-DrG" customClass="ColorView">
+                            <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <color key="tintColor" name="Color-7"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="40" id="3aD-Qs-3H6"/>
+                                <constraint firstAttribute="height" constant="40" id="MbE-DI-m4H"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zpr-na-3rO" customClass="ColorView">
+                            <rect key="frame" x="60" y="0.0" width="40" height="40"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <color key="tintColor" name="Color-8"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="40" id="4RN-v4-NNf"/>
+                                <constraint firstAttribute="height" constant="40" id="hCP-hF-jsA"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="76e-cI-fPV" customClass="ColorView">
+                            <rect key="frame" x="120" y="0.0" width="40" height="40"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <color key="tintColor" name="Color-9"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="40" id="QYg-uZ-xdb"/>
+                                <constraint firstAttribute="height" constant="40" id="oEo-tJ-YQP"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ciT-zJ-6B8" customClass="ColorView">
+                            <rect key="frame" x="180" y="0.0" width="40" height="40"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <color key="tintColor" name="Color-10"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="40" id="QJU-rb-X4Q"/>
+                                <constraint firstAttribute="height" constant="40" id="Uh2-0A-65p"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SzH-Ne-up0" customClass="ColorView">
+                            <rect key="frame" x="240" y="0.0" width="40" height="40"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <color key="tintColor" name="Color-11"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="COy-rg-16z"/>
+                                <constraint firstAttribute="width" constant="40" id="Rz2-V9-Cld"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IUl-ZN-hsN" customClass="ColorView">
+                            <rect key="frame" x="300" y="0.0" width="40" height="40"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <color key="tintColor" name="Color-12"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="40" id="ctv-Xy-tiu"/>
+                                <constraint firstAttribute="height" constant="40" id="myT-mX-3Wq"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                </stackView>
+                <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="fSw-1I-w8P">
+                    <rect key="frame" x="17" y="90" width="340" height="40"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t5z-M9-Pvi" customClass="ColorView">
+                            <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <color key="tintColor" name="Color-1"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="40" id="3ff-3X-86Y"/>
+                                <constraint firstAttribute="height" constant="40" id="97c-To-Oor"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hsN-Ai-cSb" customClass="ColorView">
+                            <rect key="frame" x="60" y="0.0" width="40" height="40"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <color key="tintColor" name="Color-2"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="VYE-CA-CMw"/>
+                                <constraint firstAttribute="width" constant="40" id="dM9-H3-oqJ"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pMh-a3-Mmc" customClass="ColorView">
+                            <rect key="frame" x="120" y="0.0" width="40" height="40"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <color key="tintColor" name="Color-3"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="40" id="Nrc-0O-Q7g"/>
+                                <constraint firstAttribute="height" constant="40" id="Y6G-bW-fWU"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OVd-4Q-TFD" customClass="ColorView">
+                            <rect key="frame" x="180" y="0.0" width="40" height="40"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <color key="tintColor" name="Color-4"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="40" id="qCX-Of-3HE"/>
+                                <constraint firstAttribute="height" constant="40" id="u8V-4I-8NG"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hmR-nh-AxC" customClass="ColorView">
+                            <rect key="frame" x="240" y="0.0" width="40" height="40"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <color key="tintColor" name="Color-5"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="BRH-F9-35P"/>
+                                <constraint firstAttribute="width" constant="40" id="rOw-8Y-CyE"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ugn-g1-9B5" customClass="ColorView">
+                            <rect key="frame" x="300" y="0.0" width="40" height="40"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <color key="tintColor" name="Color-6"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="fYn-Cw-QTM"/>
+                                <constraint firstAttribute="width" constant="40" id="mDb-52-E97"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                </stackView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aqm-RO-Xbj" customClass="ActionButton">
+                    <rect key="frame" x="301" y="20" width="34" height="30"/>
+                    <state key="normal" title="Save"/>
+                    <connections>
+                        <action selector="saveButtonTapped:" destination="-1" eventType="touchUpInside" id="H0L-RY-4z7"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="fSw-1I-w8P" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="17" id="1B2-SD-Kdm"/>
+                <constraint firstItem="aqm-RO-Xbj" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="20" id="Ce5-bd-JMw"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="aqm-RO-Xbj" secondAttribute="trailing" constant="40" id="HR7-Dz-B3q"/>
+                <constraint firstItem="HNU-tB-vIK" firstAttribute="top" secondItem="fSw-1I-w8P" secondAttribute="bottom" constant="20" id="KOD-er-WxP"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="fSw-1I-w8P" secondAttribute="trailing" constant="18" id="LXa-UG-wdU"/>
+                <constraint firstItem="fSw-1I-w8P" firstAttribute="top" secondItem="aqm-RO-Xbj" secondAttribute="bottom" constant="40" id="Ves-Rp-9I1"/>
+                <constraint firstItem="HNU-tB-vIK" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="17" id="aWV-Nc-CvQ"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="HNU-tB-vIK" secondAttribute="trailing" constant="18" id="d1l-up-T2q"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="155.07246376811597" y="736.27232142857144"/>
+        </view>
+    </objects>
+    <designables>
+        <designable name="aqm-RO-Xbj">
+            <size key="intrinsicContentSize" width="34" height="30"/>
+        </designable>
+    </designables>
+    <resources>
+        <namedColor name="Color-1">
+            <color red="0.88627450980392153" green="0.10588235294117647" blue="0.17254901960784313" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Color-10">
+            <color red="0.0" green="0.1803921568627451" blue="0.23529411764705882" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Color-11">
+            <color red="0.054901960784313725" green="0.21568627450980393" blue="0.094117647058823528" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Color-12">
+            <color red="0.38039215686274508" green="0.058823529411764705" blue="0.062745098039215685" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Color-2">
+            <color red="0.24313725490196078" green="0.090196078431372548" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Color-3">
+            <color red="0.0" green="0.48627450980392156" blue="0.21568627450980393" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Color-4">
+            <color red="0.50196078431372548" green="0.50196078431372548" blue="0.50196078431372548" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Color-5">
+            <color red="0.61568627450980395" green="0.36862745098039218" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Color-6">
+            <color red="1" green="0.47843137254901963" blue="0.40784313725490196" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Color-7">
+            <color red="1" green="0.67843137254901964" blue="0.32941176470588235" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Color-8">
+            <color red="0.0" green="0.68235294117647061" blue="0.92941176470588238" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Color-9">
+            <color red="1" green="0.46666666666666667" blue="0.63529411764705879" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

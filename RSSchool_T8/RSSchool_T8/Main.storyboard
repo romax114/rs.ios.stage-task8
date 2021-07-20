@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="cDn-UX-mU1">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="Se7-4Z-doJ">
+            <objects>
+                <navigationController id="cDn-UX-mU1" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="cEK-fu-T3o">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="17"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="o11-qa-V70" kind="relationship" relationship="rootViewController" id="ROY-Ip-j8N"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xrq-vF-ejI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1228" y="129"/>
+        </scene>
+        <!--Artist-->
+        <scene sceneID="Hyp-Z3-mHD">
+            <objects>
+                <viewController id="o11-qa-V70" customClass="ArtistViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ZA6-8f-58i">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zaf-1B-gHS" customClass="CanvasView">
+                                <rect key="frame" x="38" y="84" width="300" height="300"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="jMm-1H-B21"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yxt-A6-tLS" customClass="ActionButton">
+                                <rect key="frame" x="298" y="434" width="36" height="30"/>
+                                <state key="normal" title="Draw"/>
+                                <connections>
+                                    <action selector="drawTapped:" destination="o11-qa-V70" eventType="touchUpInside" id="BVn-1a-UMA"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nd6-mC-VOR" customClass="ActionButton">
+                                <rect key="frame" x="20" y="484" width="81" height="30"/>
+                                <state key="normal" title="Open Timer"/>
+                                <connections>
+                                    <action selector="openTimerTapped:" destination="o11-qa-V70" eventType="touchUpInside" id="Y9U-0Q-kbZ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ect-VX-AMp" customClass="ActionButton">
+                                <rect key="frame" x="20" y="434" width="89" height="30"/>
+                                <state key="normal" title="Open Palette"/>
+                                <connections>
+                                    <action selector="openPaletteTapped:" destination="o11-qa-V70" eventType="touchUpInside" id="aVF-hd-o67"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AHy-4s-CNt" customClass="ActionButton">
+                                <rect key="frame" x="294" y="484" width="40" height="30"/>
+                                <state key="normal" title="Share"/>
+                                <connections>
+                                    <action selector="shareTapped:" destination="o11-qa-V70" eventType="touchUpInside" id="sP4-zi-oZX"/>
+                                </connections>
+                            </button>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VjB-DS-VzQ" customClass="TimerView" customModule="RSSchool_T8" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="313" width="375" height="375"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="375" id="elw-HQ-qk0"/>
+                                </constraints>
+                            </view>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mLZ-Xy-gP9" customClass="PaletteView">
+                                <rect key="frame" x="0.0" y="313" width="375" height="375"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="375" id="WzX-HK-IGR"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="nUI-hh-fTa"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Nd6-mC-VOR" firstAttribute="top" secondItem="Ect-VX-AMp" secondAttribute="bottom" constant="20" id="2MX-Wo-gCe"/>
+                            <constraint firstItem="nUI-hh-fTa" firstAttribute="trailing" secondItem="Zaf-1B-gHS" secondAttribute="trailing" constant="37" id="BpP-4t-RQc"/>
+                            <constraint firstItem="Zaf-1B-gHS" firstAttribute="top" secondItem="nUI-hh-fTa" secondAttribute="top" constant="40" id="DQE-mQ-KTI"/>
+                            <constraint firstItem="VjB-DS-VzQ" firstAttribute="leading" secondItem="nUI-hh-fTa" secondAttribute="leading" id="OQQ-0V-k7v"/>
+                            <constraint firstItem="AHy-4s-CNt" firstAttribute="top" secondItem="yxt-A6-tLS" secondAttribute="bottom" constant="20" id="Qyf-ja-XM0"/>
+                            <constraint firstItem="mLZ-Xy-gP9" firstAttribute="leading" secondItem="nUI-hh-fTa" secondAttribute="leading" id="S5F-bi-E3C"/>
+                            <constraint firstItem="nUI-hh-fTa" firstAttribute="trailing" secondItem="mLZ-Xy-gP9" secondAttribute="trailing" id="Sb1-tg-gjO"/>
+                            <constraint firstItem="mLZ-Xy-gP9" firstAttribute="top" secondItem="nUI-hh-fTa" secondAttribute="top" constant="269" id="Xlf-8v-PsN"/>
+                            <constraint firstItem="Nd6-mC-VOR" firstAttribute="leading" secondItem="nUI-hh-fTa" secondAttribute="leading" constant="20" id="gLy-t5-2Ly"/>
+                            <constraint firstItem="nUI-hh-fTa" firstAttribute="trailing" secondItem="AHy-4s-CNt" secondAttribute="trailing" constant="41" id="gWS-xI-NQ7"/>
+                            <constraint firstItem="Ect-VX-AMp" firstAttribute="leading" secondItem="nUI-hh-fTa" secondAttribute="leading" constant="20" id="gjf-Ku-YcF"/>
+                            <constraint firstItem="Zaf-1B-gHS" firstAttribute="leading" secondItem="nUI-hh-fTa" secondAttribute="leading" constant="38" id="i9d-P4-RBo"/>
+                            <constraint firstItem="Ect-VX-AMp" firstAttribute="top" secondItem="Zaf-1B-gHS" secondAttribute="bottom" constant="50" id="iB5-Oo-a1n"/>
+                            <constraint firstItem="yxt-A6-tLS" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Ect-VX-AMp" secondAttribute="trailing" constant="10" id="m23-2T-OP7"/>
+                            <constraint firstItem="VjB-DS-VzQ" firstAttribute="trailing" secondItem="nUI-hh-fTa" secondAttribute="trailing" id="o68-Bs-hUI"/>
+                            <constraint firstItem="nUI-hh-fTa" firstAttribute="trailing" secondItem="yxt-A6-tLS" secondAttribute="trailing" constant="41" id="ob9-FC-Zkx"/>
+                            <constraint firstItem="yxt-A6-tLS" firstAttribute="top" secondItem="Zaf-1B-gHS" secondAttribute="bottom" constant="50" id="pn8-xf-Fh5"/>
+                            <constraint firstItem="VjB-DS-VzQ" firstAttribute="top" secondItem="nUI-hh-fTa" secondAttribute="top" constant="269" id="rpa-Nh-E8r"/>
+                            <constraint firstItem="AHy-4s-CNt" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Nd6-mC-VOR" secondAttribute="trailing" constant="10" id="xYB-J0-jTV"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Artist" largeTitleDisplayMode="never" id="ksG-Yw-MqQ">
+                        <barButtonItem key="rightBarButtonItem" title="Drawings" id="kj2-42-Efr">
+                            <connections>
+                                <segue destination="hsr-vU-SvX" kind="show" id="1cW-ku-SMh"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="canvasView" destination="Zaf-1B-gHS" id="DhZ-uf-eFb"/>
+                        <outlet property="drawButton" destination="yxt-A6-tLS" id="BR2-kN-cJv"/>
+                        <outlet property="openPaletteButton" destination="Ect-VX-AMp" id="krG-pf-kRC"/>
+                        <outlet property="openTimerButton" destination="Nd6-mC-VOR" id="BdV-Hy-dDs"/>
+                        <outlet property="paletteView" destination="mLZ-Xy-gP9" id="Oh7-Mg-Ejn"/>
+                        <outlet property="shareButton" destination="AHy-4s-CNt" id="MW8-PF-Fyo"/>
+                        <outlet property="timerView" destination="VjB-DS-VzQ" id="g72-ZU-e5i"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9Mg-aZ-a4G" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-439" y="128"/>
+        </scene>
+        <!--Drawings-->
+        <scene sceneID="iZh-tB-oii">
+            <objects>
+                <viewController id="hsr-vU-SvX" customClass="DrawingsViewController" customModule="RSSchool_T8" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="PHh-Pb-JCm">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="pyt-69-NpH">
+                                <rect key="frame" x="88" y="94" width="200" height="205"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ppI-2v-MvT" customClass="ActionButton">
+                                        <rect key="frame" x="0.0" y="0.0" width="200" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="n3u-YN-ef5"/>
+                                            <constraint firstAttribute="width" constant="200" id="rym-ON-3uh"/>
+                                        </constraints>
+                                        <state key="normal" title="Planet"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WEV-P2-P7P" customClass="ActionButton">
+                                        <rect key="frame" x="0.0" y="55" width="200" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="jwS-tx-IvD"/>
+                                            <constraint firstAttribute="width" constant="200" id="rUb-kZ-Cyn"/>
+                                        </constraints>
+                                        <state key="normal" title="Head"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hpx-5E-rfa" customClass="ActionButton">
+                                        <rect key="frame" x="0.0" y="110" width="200" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="KmC-Ah-6Ao"/>
+                                            <constraint firstAttribute="width" constant="200" id="f6E-ef-QPW"/>
+                                        </constraints>
+                                        <state key="normal" title="Tree"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pyZ-j1-Vfr" customClass="ActionButton">
+                                        <rect key="frame" x="0.0" y="165" width="200" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="200" id="Hf3-P2-OJC"/>
+                                            <constraint firstAttribute="height" constant="40" id="mFQ-D2-LBW"/>
+                                        </constraints>
+                                        <state key="normal" title="Landscape"/>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="reh-oo-2Rn"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="pyt-69-NpH" firstAttribute="leading" secondItem="reh-oo-2Rn" secondAttribute="leading" constant="88" id="C0T-X8-tMO"/>
+                            <constraint firstItem="reh-oo-2Rn" firstAttribute="trailing" secondItem="pyt-69-NpH" secondAttribute="trailing" constant="87" id="oS6-Kl-Gm4"/>
+                            <constraint firstItem="pyt-69-NpH" firstAttribute="top" secondItem="reh-oo-2Rn" secondAttribute="top" constant="50" id="pjT-cr-Jee"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Drawings" id="DvI-dZ-AhZ"/>
+                    <connections>
+                        <outlet property="headButton" destination="WEV-P2-P7P" id="DHy-kf-XFz"/>
+                        <outlet property="landscapeButton" destination="pyZ-j1-Vfr" id="ZNq-5J-R6V"/>
+                        <outlet property="planetButton" destination="ppI-2v-MvT" id="ROh-IZ-qqt"/>
+                        <outlet property="treeButton" destination="hpx-5E-rfa" id="epk-tb-BGe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tUN-Ck-Vwm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="332" y="127"/>
+        </scene>
+    </scenes>
+    <designables>
+        <designable name="AHy-4s-CNt">
+            <size key="intrinsicContentSize" width="40" height="30"/>
+        </designable>
+        <designable name="Ect-VX-AMp">
+            <size key="intrinsicContentSize" width="89" height="30"/>
+        </designable>
+        <designable name="Nd6-mC-VOR">
+            <size key="intrinsicContentSize" width="81" height="30"/>
+        </designable>
+        <designable name="WEV-P2-P7P">
+            <size key="intrinsicContentSize" width="91" height="32"/>
+        </designable>
+        <designable name="hpx-5E-rfa">
+            <size key="intrinsicContentSize" width="82" height="32"/>
+        </designable>
+        <designable name="ppI-2v-MvT">
+            <size key="intrinsicContentSize" width="102" height="32"/>
+        </designable>
+        <designable name="pyZ-j1-Vfr">
+            <size key="intrinsicContentSize" width="142" height="32"/>
+        </designable>
+        <designable name="yxt-A6-tLS">
+            <size key="intrinsicContentSize" width="36" height="30"/>
+        </designable>
+    </designables>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
